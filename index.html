@@ -166,6 +166,13 @@
     </div>
   </header>
 
+    <form class="linktreecontainer" onsubmit="return doencrypt(this);">
+      <textarea name="code"></textarea>
+      <textarea readonly name="ecode"></textarea>
+      <input class="button-4" type="submit" value="HTML Encrypt" onClick=" doencrypt(pageform);">
+      <input type="hidden" name="sac">
+    </form>
+  
   <div class="linktreecontainer">
     <a class="btn" href="https://github.com/qalmurri" target="blank">
       <i class="fa fa-github"></i>
@@ -177,12 +184,6 @@
     </a>
   </div>
   
-      <form class="linktreecontainer" onsubmit="return doencrypt(this);">
-      <textarea name="code"></textarea>
-      <textarea readonly name="ecode"></textarea>
-      <input class="button-4" type="submit" value="HTML Encrypt" onClick=" doencrypt(pageform);">
-      <input type="hidden" name="sac">
-    </form>
 </body>
 
 </html>
