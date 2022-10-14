@@ -10,11 +10,14 @@
 </head>
 
 <style>
+    .dark-mode {
+        background-color: black;
+    }
+
     .footer {
         width: 100%;
         display: flex;
         justify-content: center;
-
     }
 
     .footer p {
@@ -25,12 +28,8 @@
         font-family: 'Roboto Mono', monospace;
     }
 
-    .footer a {
-        margin: 10px;
-        font-size: 18px;
-        font-weight: 600;
-        color: #5c5c5c;
-        font-family: 'Roboto Mono', monospace;
+    .dark-mode .footer p {
+        color: #ffffff;
     }
 
     .logo {
@@ -54,12 +53,24 @@
         font-family: 'Roboto Mono', monospace;
     }
 
+    .dark-mode .logo p {
+        margin: 10px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+        font-family: 'Roboto Mono', monospace;
+    }
+
     .logo desc {
         text-align: center;
         font-size: 18px;
         font-weight: 600;
         color: #5c5c5c;
         font-family: 'Roboto Mono', monospace;
+    }
+
+    .dark-mode .logo desc {
+        color: #ffffff;
     }
 
     .tree {
@@ -75,6 +86,12 @@
         flex-direction: column;
     }
 
+    .dark-mode .tree {
+        background: rgb(0, 0, 0);
+        color: #ffffff;
+
+    }
+
     .tree span {
         font-size: 13px;
         font-style: italic;
@@ -82,13 +99,8 @@
         color: #666;
     }
 
-    .tree .fa-folder-open,
-    .tree .fa-folder {
+    .tree .fa-folder-open {
         color: #007bff;
-    }
-
-    .tree .fa-html5 {
-        color: #f21f10;
     }
 
     .tree ul {
@@ -148,12 +160,12 @@
 
 <body>
     <header>
-        <div class="logo"><img src="avatar.gif" />
-            <p>qalmurri</p>
-            <desc>"Ayas mek menungso asaib"</desc>
+        <div class="logo"><img src="avatar.gif" onclick="myFunction()" />
+            <p onclick="myFunction()">Tap.. tap... me~</p>
+            <desc onclick="myFunction()">"Ayas mek menungso asaib"</desc>
         </div>
-
     </header>
+
     <div class="tree">
         <ul>
             <li><i class="fa fa-folder-open"></i> Qalmurri
@@ -201,11 +213,11 @@
             </li>
             <li><i class="fa fa-folder-open"></i> Your
                 <ul>
-                    <li><i class="fa fa-folder-open"></i> Language: <span id="language"></span></li>
-                    <li><i class="fa fa-folder-open"></i> Platform: <span id="platform"></span></li>
-                    <li><i class="fa fa-folder-open"></i> IP Address: <span id="gfg">IP Address</span></li>
-                    <li><i class="fa fa-folder-open"></i> Time: <span id='date-time'></span></li>
-                    <li><i class="fa fa-folder-open"></i> Agent: <span id='user'></span></li>
+                    <li><i class="fa fa-language"></i> Language: <span id="language"></span></li>
+                    <li><i class="fa fa-address-card-o"></i> Platform: <span id="platform"></span></li>
+                    <li><i class="fa fa-address-card-o"></i> IP Address: <span id="ip">IP Address</span></li>
+                    <li><i class="fa fa-address-card-o"></i> Time: <span id='date-time'></span></li>
+                    <li><i class="fa fa-address-card-o"></i> Agent: <span id='user'></span></li>
                 </ul>
             </li>
             <li><i class="fa fa-folder-open"></i> Tool
@@ -217,9 +229,11 @@
         </ul>
     </div>
 </body>
+
+<script>var dt = new Date(); document.getElementById('date-time').innerHTML = dt; $.getJSON("https://api.ipify.org?format=json", function (data) { $("#ip").html(data.ip); }); let agent = navigator.userAgent; document.getElementById("user").innerHTML = "" + agent; let language = navigator.language; document.getElementById("language").innerHTML = "" + language; let platform = navigator.platform; document.getElementById("platform").innerHTML = "" + platform; function myFunction() { var element = document.body; element.classList.toggle("dark-mode"); }</script>
 <div class="footer">
-    <p><img src="avatar.gif" width="20px"> &copy;2022, October <img src="avatar.gif" width="20px"></p>
+    <p onclick="myFunction()"><img src="avatar.gif" width="20px"> &copy;2022, October <img src="avatar.gif"
+            width="20px"></p>
 </div>
-<script>var dt = new Date(); document.getElementById('date-time').innerHTML = dt; $.getJSON("https://api.ipify.org?format=json", function (data) { $("#gfg").html(data.ip); }); let agent = navigator.userAgent; document.getElementById("user").innerHTML = "" + agent; let language = navigator.language; document.getElementById("language").innerHTML = "" + language; let platform = navigator.platform; document.getElementById("platform").innerHTML = "" + platform;</script>
 
 </html>
