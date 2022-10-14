@@ -3,13 +3,22 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qalmurri</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="avatar.gif" type="image/gif">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Qalmurri</title>
 </head>
 
 <style>
+    .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
     .dark-mode {
         background-color: black;
     }
@@ -67,6 +76,7 @@
         font-weight: 600;
         color: #5c5c5c;
         font-family: 'Roboto Mono', monospace;
+        padding-bottom: 4px;
     }
 
     .dark-mode .logo desc {
@@ -170,6 +180,7 @@
         <div class="logo"><img src="avatar.gif" onclick="myFunction()" />
             <p onclick="myFunction()">Tap.. tap... me~</p>
             <desc>"Ayas mek menungso asaib"</desc>
+            <button href="game/surf" class="btn"><i class="fa fa-key"></i> Surf</button>
         </div>
     </header>
 
