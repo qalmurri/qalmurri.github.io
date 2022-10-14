@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="avatar.gif" type="image/gif">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Qalmurri</title>
+
 </head>
 
 <style>
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .footer p {
+        margin: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #5c5c5c;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    .footer a {
+        margin: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #5c5c5c;
+        font-family: 'Roboto Mono', monospace;
+    }
+
     .logo {
         width: 100%;
         display: flex;
@@ -130,7 +155,6 @@
         </div>
 
     </header>
-
     <div class="tree">
         <ul>
             <li><i class="fa fa-folder-open"></i> Qalmurri
@@ -176,6 +200,23 @@
                     </li>
                 </ul>
             </li>
+            <li><i class="fa fa-folder-open"></i> You
+                <ul>
+                    <li><i class="fa fa-folder-open"></i> Platform - <span id="platform"></span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-folder-open"></i> IP Address - <span id="gfg">IP Address</span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-folder-open"></i> Language - <span id="language"></span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-folder-open"></i> Your time - <span id='date-time'></span></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-folder-open"></i> User Agent - <span id='user'></span></li>
+                </ul>
+            </li>
             <li><i class="fa fa-folder-open"></i> Tool
                 <ul>
                     <li><i class="fa fa-code"></i> <a href="https://qalmurri.github.io/html_encrypt"
@@ -185,5 +226,21 @@
         </ul>
     </div>
 </body>
+<div class="footer">
+    <p><img src="avatar.gif" width="20px"> &copy;2022, October <img src="avatar.gif" width="20px"></p>
+</div>
+<script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML = dt;
+    $.getJSON("https://api.ipify.org?format=json", function (data) {
+        $("#gfg").html(data.ip);
+    })
+    let agent = navigator.userAgent;
+    document.getElementById("user").innerHTML = "" + agent;
+    let language = navigator.language;
+    document.getElementById("language").innerHTML = "" + language;
+    let platform = navigator.platform;
+    document.getElementById("platform").innerHTML = "" + platform;
+</script>
 
 </html>
