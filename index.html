@@ -7,7 +7,6 @@
     <link rel="icon" href="avatar.gif" type="image/gif">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Qalmurri</title>
-
 </head>
 
 <style>
@@ -229,18 +228,6 @@
 <div class="footer">
     <p><img src="avatar.gif" width="20px"> &copy;2022, October <img src="avatar.gif" width="20px"></p>
 </div>
-<script>
-    var dt = new Date();
-    document.getElementById('date-time').innerHTML = dt;
-    $.getJSON("https://api.ipify.org?format=json", function (data) {
-        $("#gfg").html(data.ip);
-    })
-    let agent = navigator.userAgent;
-    document.getElementById("user").innerHTML = "" + agent;
-    let language = navigator.language;
-    document.getElementById("language").innerHTML = "" + language;
-    let platform = navigator.platform;
-    document.getElementById("platform").innerHTML = "" + platform;
-</script>
+<script>var dt = new Date(); document.getElementById('date-time').innerHTML = dt; $.getJSON("https://api.ipify.org?format=json", function (data) { $("#gfg").html(data.ip); }); let agent = navigator.userAgent; document.getElementById("user").innerHTML = "" + agent; let language = navigator.language; document.getElementById("language").innerHTML = "" + language; let platform = navigator.platform; document.getElementById("platform").innerHTML = "" + platform;</script>
 
 </html>
