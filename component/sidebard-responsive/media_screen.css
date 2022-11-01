@@ -1,22 +1,29 @@
 @media screen and (max-width: 700px) {
-    .sidebar {
+    .sidenav {
         width: 100%;
         height: auto;
         position: relative;
     }
 
-    .sidebar a {
+    .sidenav a {
         float: left;
     }
 
     div.content {
         margin-left: 0;
     }
+
+
 }
 
 @media screen and (max-width: 400px) {
-    .sidebar a {
+    .sidenav a {
         text-align: center;
         float: none;
+    }
+
+    .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
     }
 }

@@ -1,3 +1,7 @@
+* {
+    border: 0.1px solid rgb(202, 202, 202);
+}
+
 body {
     margin: 0;
     font-family: "Lato", sans-serif;
@@ -6,5 +10,18 @@ body {
 div.content {
     margin-left: 200px;
     padding: 1px 16px;
-    height: 1000px;
+    height: 100%;
+}
+
+.row {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0px;
+    height: 300px;
 }
