@@ -1,0 +1,29 @@
+.tooltip {
+    position: relative;
+}
+
+.tooltip::before {
+    content: "\2003" attr(class);
+    /* print em-space with class text */
+    text-indent: -3.9em;
+    /* add negative text offset to hide class name */
+    display: inline-block;
+    position: absolute;
+    bottom: 50%;
+    background: #000;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+    overflow: hidden;
+    max-width: 50%;
+    /* avoids very long sentences */
+    pointer-events: none;
+    /* prevents tooltip from firing on pseudo hover */
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+    bottom: 100%;
+}

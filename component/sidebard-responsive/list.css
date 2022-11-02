@@ -1,0 +1,29 @@
+.list input:checked~.list_detail {
+    height: auto;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+/*list_judul*/
+.list_judul {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.list_judul p {
+    margin: 0px;
+}
+
+.list_judul a {
+    text-decoration: none;
+}
+
+/*list_detail*/
+.list_detail {
+    height: 0;
+    overflow: hidden;
+}
