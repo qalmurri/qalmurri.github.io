@@ -1,1 +1,0 @@
-## Vertical Navigation Bar
