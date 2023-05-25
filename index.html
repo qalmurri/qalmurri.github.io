@@ -1,260 +1,242 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>qalmurri.github.io</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="avatar.gif" type="image/gif">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="avatar.gif" type="image/gif" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+  </head>
 
-<style>
-    .btn {
-        background-color: #666;
-        border: none;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-
-    .dark-mode .btn {
-        background-color: rgb(255, 255, 255);
-        color: #666;
-    }
-
-    .dark-mode {
-        background-color: black;
+  <style>
+    html {
+      background: black;
     }
 
     .footer {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .footer p {
-        margin: 10px;
-        font-size: 18px;
-        font-weight: 600;
-        color: #5c5c5c;
-        font-family: 'Roboto Mono', monospace;
-    }
-
-    .dark-mode .footer p {
-        color: #ffffff;
+      margin: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      font-family: "Roboto Mono", monospace;
     }
 
     .logo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px 0;
-        flex-direction: column;
-    }
-    
-    .logo .button {
-        display: content;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      flex-direction: column;
     }
 
     .logo img {
-        height: 75px;
+      height: 75px;
     }
 
     .logo p {
-        margin: 10px;
-        font-size: 24px;
-        font-weight: 600;
-        color: #5c5c5c;
-        font-family: 'Roboto Mono', monospace;
-    }
-
-    .dark-mode .logo p {
-        margin: 10px;
-        font-size: 24px;
-        font-weight: 600;
-        color: #ffffff;
-        font-family: 'Roboto Mono', monospace;
+      margin: 10px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffff;
+      font-family: "Roboto Mono", monospace;
     }
 
     .logo desc {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 600;
-        color: #5c5c5c;
-        font-family: 'Roboto Mono', monospace;
-        padding-bottom: 4px;
-    }
-
-    .dark-mode .logo desc {
-        color: #ffffff;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      font-family: "Roboto Mono", monospace;
+      padding-bottom: 4px;
     }
 
     .tree {
-        position: relative;
-        background: white;
-        font-family: 'Roboto Mono', monospace;
-        font-size: 0.85rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .dark-mode .tree {
-        background: rgb(0, 0, 0);
-        color: #ffffff;
-
+      position: relative;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.85rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     .tree span {
-        font-size: 13px;
-        font-style: italic;
-        letter-spacing: 0.4px;
-        color: #666;
+      font-size: 13px;
+      font-style: italic;
+      letter-spacing: 0.4px;
+      color: red;
     }
 
     .tree .fa-folder-open {
-        color: #007bff;
+      color: #007bff;
     }
 
     .tree ul {
-        padding-left: 5px;
-        list-style: none;
+      padding-left: 5px;
+      list-style: none;
     }
 
     .tree ul li {
-        position: relative;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 15px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+      position: relative;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
     }
 
     .tree ul li:before {
-        position: absolute;
-        top: 15px;
-        left: 0;
-        width: 10px;
-        height: 1px;
-        margin: auto;
-        content: '';
-        background-color: #666;
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 10px;
+      height: 1px;
+      margin: auto;
+      content: "";
+      background-color: #666;
     }
 
     .tree ul li:after {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 1px;
-        height: 100%;
-        content: '';
-        background-color: #666;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      content: "";
+      background-color: #666;
     }
 
     .tree ul li:last-child:after {
-        height: 15px;
+      height: 15px;
     }
 
     .tree ul a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .dark-mode .tree ul a {
-        color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .tree ul a:hover {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
+      text-decoration: none;
+      color: red;
+      cursor: pointer;
     }
+  </style>
 
-    .dark-mode .tree ul a:hover {
-        color: rgb(255, 255, 255);
-    }
-</style>
-
-<body>
+  <body>
     <header>
-        <div class="logo"><img src="avatar.gif" onclick="myFunction()" />
-            <p onclick="myFunction()">Tap.. tap... me~</p>
-            <desc>"Betah Melek"</desc>
-            <div class="button">
-            <a href="game/surf"><button class="btn"><i class="fa fa-key"></i> Surf</button></a>
-            <a href="effect/flowfield_particles_2"><button class="btn"><i class="fa fa-key"></i> Flowfield Particles 2</button></a>
-            <a href="effect/matter_js"><button class="btn"><i class="fa fa-key"></i> Matter JS</button></a>
-                </div>
-        </div>
+      <div class="logo">
+        <img src="avatar.gif" />
+        <p>MUMEEET</p>
+        <desc>"Betah Melek"</desc>
+      </div>
     </header>
 
     <div class="tree">
-        <ul>
-            <li><i class="fa fa-user"></i> Qalmurri
-                <ul>
-                    <li><i class="fa fa-folder-open"></i> Social Media
-                        <ul>
-                            <li><i class="fa fa-youtube"></i> <a href="https://youtube.com/c/magerpol"
-                                    target="_blank">Magerpol</a><span> - Youtube Tutorial</span></li>
-                            <li><i class="fa fa-user-circle"></i> <a href="https://discord.gg/hnptR9e9HB"
-                                    target="_blank">Magerpol</a><span> - Community Discord</span></li>
-                            <li><i class="fa fa-github"></i> <a href="https://github.com/qalmurri/"
-                                    target="_blank">Qalmurri</a><span> -
-                                    Github</span></li>
-                        </ul>
-                    </li>
-                    <li><i class="fa fa-folder-open"></i> qalmurri.github.io
-                        <ul>
-                            <li><i class="fa fa-folder-open"></i> Component
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-code"></i> <a href="component/vertical_navigation_bar/"
-                                            target="_blank">Vertical
-                                            Navigation Bar</a><span> - Using only HTML, CSS &
-                                            Javascript, a little touch of transition smooth</span>
-                                    </li>
-                                       <li>
-                                        <i class="fa fa-code"></i> <a href="component/clock-javascript/"
-                                            target="_blank">Clock Javascript</a><span> - Using only HTML &
-                                            Javascript. Basic!!!</span>
-                                    </li>
-                                       <li>
-                                        <i class="fa fa-code"></i> <a href="component/3d_book/"
-                                            target="_blank">3D Book</a><span> - Using only HTML, CSS &
-                                            Javascript. Basic!!!</span>
-                                    </li>
-                                </ul>
-                            </li>                          
-                        </ul>
-                    </li>
-                </ul>
+      <ul>
+        <li>
+          <i class="fa fa-user"></i> Qalmurri
+          <ul>
+            <li>
+              <i class="fa fa-folder-open"></i> Social Media
+              <ul>
+                <li>
+                  <i class="fa fa-youtube"></i>
+                  <a href="https://youtube.com/c/magerpol" target="_blank"
+                    >Magerpol:</a
+                  ><span> Youtube Tutorial</span>
+                </li>
+                <li>
+                  <i class="fa fa-user-circle"></i>
+                  <a href="https://discord.gg/hnptR9e9HB" target="_blank"
+                    >Magerpol:</a
+                  ><span> Community Discord</span>
+                </li>
+                <li>
+                  <i class="fa fa-github"></i>
+                  <a href="https://github.com/qalmurri/" target="_blank"
+                    >Qalmurri:</a
+                  ><span> Github</span>
+                </li>
+              </ul>
             </li>
-            <li><i class="fa fa-folder-open"></i> Your
-                <ul>
-                    <li><i class="fa fa-language"></i> Language: <span id="language"></span></li>
-                    <li><i class="fa fa-address-card-o"></i> Platform: <span id="platform"></span></li>
-                    <li><i class="fa fa-address-card-o"></i> IP Address: <span id="ip">IP Address</span></li>
-                    <li><i class="fa fa-address-card-o"></i> Time: <span id='date-time'></span></li>
-                    <li><i class="fa fa-address-card-o"></i> Agent: <span id='user'></span></li>
-                </ul>
+            <li>
+              <i class="fa fa-folder-open"></i> qalmurri.github.io
+              <ul>
+                <li>
+                  <i class="fa fa-folder-open"></i> Component
+                  <ul>
+                    <li>
+                      <i class="fa fa-code"></i>
+                      <a href="www.google.com" target="_blank">Google:</a
+                      ><span> Searching Engine</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
-        </ul>
+          </ul>
+        </li>
+        <li>
+          <i class="fa fa-folder-open"></i> Your Device Details
+          <ul>
+            <li>
+              <i class="fa fa-language"></i> Language:
+              <span id="language"></span>
+            </li>
+            <li>
+              <i class="fa fa-address-card-o"></i> Platform:
+              <span id="platform"></span>
+            </li>
+            <li>
+              <i class="fa fa-address-card-o"></i> IP Address:
+              <span id="ip">IP Address</span>
+            </li>
+            <li>
+              <i class="fa fa-address-card-o"></i> Time:
+              <span id="date-time"></span>
+            </li>
+            <li>
+              <i class="fa fa-address-card-o"></i> Agent:
+              <span id="user"></span>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-</body>
+  </body>
 
-<script>var dt = new Date(); document.getElementById('date-time').innerHTML = dt; $.getJSON("https://api.ipify.org?format=json", function (data) { $("#ip").html(data.ip); }); let agent = navigator.userAgent; document.getElementById("user").innerHTML = "" + agent; let language = navigator.language; document.getElementById("language").innerHTML = "" + language; let platform = navigator.platform; document.getElementById("platform").innerHTML = "" + platform; function myFunction() { var element = document.body; element.classList.toggle("dark-mode"); }</script>
-<div class="footer">
-    <p onclick="myFunction()"><img src="avatar.gif" width="20px"> &copy;2022, October <img src="avatar.gif"
-            width="20px"></p>
-</div>
-
+  <script>
+    var dt = new Date();
+    document.getElementById("date-time").innerHTML = dt;
+    $.getJSON("https://api.ipify.org?format=json", function (data) {
+      $("#ip").html(data.ip);
+    });
+    let agent = navigator.userAgent;
+    document.getElementById("user").innerHTML = "" + agent;
+    let language = navigator.language;
+    document.getElementById("language").innerHTML = "" + language;
+    let platform = navigator.platform;
+    document.getElementById("platform").innerHTML = "" + platform;
+  </script>
+  <div class="footer">
+    <p>
+      <img src="avatar.gif" width="20px" /> &copy;2022-2023, October
+      <img src="avatar.gif" width="20px" />
+    </p>
+  </div>
 </html>
