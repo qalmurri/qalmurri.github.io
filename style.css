@@ -1,0 +1,123 @@
+html {
+  background: black;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer p {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  flex-direction: column;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.logo p {
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+}
+
+.logo desc {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  padding-bottom: 4px;
+}
+
+.tree {
+  position: relative;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tree span {
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.4px;
+  color: red;
+}
+
+.tree .fa-folder-open {
+  color: red;
+}
+
+.tree ul {
+  padding-left: 5px;
+  list-style: none;
+}
+
+.tree ul li {
+  position: relative;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tree ul li:before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 10px;
+  height: 1px;
+  margin: auto;
+  content: "";
+  background-color: #666;
+}
+
+.tree ul li:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  content: "";
+  background-color: #666;
+}
+
+.tree ul li:last-child:after {
+  height: 15px;
+}
+
+.tree ul a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tree ul a:hover {
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
