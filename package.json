@@ -1,0 +1,26 @@
+{
+  "name": "budavariam",
+  "version": "0.0.1",
+  "description": "Github pages page",
+  "main": "index.js",
+  "scripts": {
+    "svg": "node utils/svg-inline",
+    "bts": "node utils/svg-inline/base64-to-svg.js",
+    "stb": "node utils/svg-inline/svg-to-base64.js",
+    "new_post": "node utils/new_post",
+    "imgopt": "jpegoptim static/images/**/*.jpg",
+    "pngopt": "find . -name '*.png' -exec optipng -o7 {} \\;",
+    "serve": "hugo serve",
+    "start": "HUGO_PARAMS_env=development hugo serve -D -F"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://budavariam@github.com/budavariam/budavariam.github.io.git"
+  },
+  "author": "Mátyás Budavári <budavariam@gmail.com> (https://budavariam.github.io)",
+  "license": "MIT",
+  "homepage": "https://github.com/budavariam/budavariam.github.io#readme",
+  "devDependencies": {
+    "svgo": "^2.8.0"
+  }
+}

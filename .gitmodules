@@ -1,0 +1,4 @@
+[submodule "themes/PaperModBudavariam"]
+	path = themes/PaperModBudavariam
+	url = git@github.com:budavariam/hugo-PaperMod.git
+	branch = budavariam
